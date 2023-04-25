@@ -10,6 +10,15 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+const quotes = [
+  { quote:'a', source: 'a', citation: 'a', year: 1},
+  { quote:'b', source: 'b', citation: 'b', year: 2},
+  { quote:'c', source: 'c', citation: 'c', year: 3},
+  { quote:'d', source: 'd', citation: 'd', year: 4},
+  { quote:'e', source: 'e', citation: 'e', year: 5},
+  { quote:'f', source: 'f', citation: 'f', year: 6}
+];
+  console.log(quotes);
 
 
 
