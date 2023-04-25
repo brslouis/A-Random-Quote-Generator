@@ -18,21 +18,17 @@ const quotes = [
   { quote:'e', source: 'e', citation: 'e', year: 5},
   { quote:'f', source: 'f', citation: 'f', year: 6}
 ];
-  console.log(quotes);
-
-
-
+ 
 /***
  * `getRandomQuote` function
 ***/
 
-const getRandomQuote = () => {
+const getRandomQuote = (arr) => {
   const randomNumber = Math.floor(Math.random() * quotes.length );
     return randomNumber;
 };
 
-console.log(getRandomQuote(1));
-
+let randomQuoteObject = getRandomQuote(quotes);
 
 /***
  * `printQuote` function
