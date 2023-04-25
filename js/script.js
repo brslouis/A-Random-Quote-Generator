@@ -25,15 +25,21 @@ const quotes = [
 
 const getRandomQuote = (arr) => {
   const randomNumber = Math.floor(Math.random() * quotes.length );
-    return randomNumber;
-};
+    for ( let i = 0; i < quotes.length; i++) {
+      let  
 
-let randomQuoteObject = getRandomQuote(quotes);
+    };
+};
+console.log(randomNumber.quotes[arr]);
 
 /***
  * `printQuote` function
 ***/
-
+/*const printQuote = () => {
+let storeQuote = getRandomQuote();
+let html = <p class="quote">`` </p> + " + "
+           <p class="source">``</p>
+};*/
 
 
 /***
