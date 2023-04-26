@@ -50,8 +50,11 @@ let green = Math.floor(Math.random() * 256);
 };
 
 randomColor();
-// the function is called immediately
-
+// the function is called immediately.
+/* I got this piece of the code from a couple sources, which in the end helped me puzzle it together. They are the following:
+   Scott Marcus @https://stackoverflow.com/questions/46716945/generate-random-background-color-by-clicking-on-link
+   Jennifer Nordell & Alexander D 
+   @https://teamtreehouse.com/community/adding-a-random-rgb-generator-function-when-clicking-on-the-button-it-doesnt-work */
 
 /***
  * `printQuote` function
@@ -86,6 +89,10 @@ const printQuote = () => {
   //Above is the code that links the updated string "html" to the browser.
   };
 
+  setInterval(printQuote, 30000);
+  setInterval(randomColor, 30000);
+// Here I used Mozzila Developer Network linked in the Auto Refresh Quotes section of the Study Guide for this project.
+// I added two setInterval functions to repeatedly call the "printQuote" & "randomColor" functions.
 
 
 /***
@@ -95,3 +102,4 @@ const printQuote = () => {
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 document.getElementById('load-quote').addEventListener("click", randomColor, false);
+// Above I've added a second event listener referencing the id "load-quote" to activate the "randomColor" function when the button is clicked.
