@@ -25,7 +25,8 @@ const quotes = [
 
 const getRandomQuote = (arr) => {
 
-      const randomNumber = Math.floor(Math.random() * quotes.length );    
+      const randomNumber = Math.floor(Math.random() * quotes.length );   
+
       for ( let i = 0; i < quotes.length; i++) {
       let getQuote = quotes[randomNumber]['quote'];
       let getSource = quotes[randomNumber]['source'];
@@ -33,9 +34,10 @@ const getRandomQuote = (arr) => {
       let getYear = quotes[randomNumber]['year'];
       let finalQuote = `${getQuote}, ${getSource}, ${getCitation}, ${getYear}`;
       return finalQuote;
-};
+      
+}   
     };
-    console.log(getRandomQuote(quotes));
+    
 
 
 
@@ -59,6 +61,7 @@ const printQuote = () => {
   + `</p>`;
 
   document.getElementById('quote-box').innerHTML = html;
+  console.log(html);
   console.log(callRandomQuote);
   };
 
