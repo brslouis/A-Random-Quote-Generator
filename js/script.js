@@ -28,14 +28,11 @@ const getRandomQuote = (arr) => {
       const randomNumber = Math.floor(Math.random() * quotes.length );   
 
       for ( let i = 0; i < quotes.length; i++) {
-      let getQuote = quotes[randomNumber]['quote'];
-      let getSource = quotes[randomNumber]['source'];
-      let getCitation = quotes[randomNumber]['citation'];
-      let getYear = quotes[randomNumber]['year'];
-      let finalQuote = `${getQuote}, ${getSource}, ${getCitation}, ${getYear}`;
-      return finalQuote;
+      let randomQuote = quotes[randomNumber];
+      return randomQuote;
       
 }   
+console.log(randomQuote);
     };
     
 
@@ -47,23 +44,26 @@ const getRandomQuote = (arr) => {
 ***/
 const printQuote = () => {
   let callRandomQuote = getRandomQuote();
-  let html = `
-    <p class="quote">${quotes[randomNumber]['quotes']}</p>
-    <p class="source">${quotes[randomNumber]['source']}
-  `
-  if ( quotes[randomNumber]['citation'] ) {
-    + `<span class="citation">${quotes[randomNumber]['citation']}</span>`;
+   
+  let html = "";
+
+   html +=  `<p class="quote">` + callRandomQuote.quote + `</p>`;
+    html += `<p class="source">` + callRandomQuote.source;
+  
+    if ( callRandomQuote.citation ) {
+   html += `<span class="citation">` + callRandomQuote.citation + `</span>`;
   } 
 
-  if ( quotes[randomNumber]['year'] ) {
-    +`<span class="year">${quotes[randomNumber]['year']}</span>`;
+   if ( callRandomQuote.year ) {
+    html += `<span class="year">` + callRandomQuote.year + `</span>`;
   } 
-  + `</p>`;
 
-  document.getElementById('quote-box').innerHTML = html;
-  console.log(html);
-  console.log(callRandomQuote);
+   html += `</p>`;
+  
+   document.getElementById('quote-box').innerHTML = html;
+   
   };
+
 
 
 /***
